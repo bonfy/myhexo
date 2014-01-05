@@ -59,6 +59,83 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-blog同步" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/01/05/blog同步/" class="article-date">
+  <time datetime="2014-01-05T06:40:35.000Z" itemprop="datePublished">1月 5 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/01/05/blog同步/">blog同步</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>blog建立的初衷是 你经常有很多东西去google或者baidu，当然一般你查到了你想要的东西你一般都会直接将这个网页设置为书签，但是这个还是会有两个问题：</p>
+<ol>
+<li>书签多了之后，如何管理？我就发现很多我以前找到过的有用的文章或者知识点，后来想起就很难再找到了</li>
+<li>书签往往保存的是一个网站路径，这个网页可能谈的事情多种多样，并不是都是你感兴趣的，你想要的。你查的可能是里面的一个命令，或者一个问题的解决方案，我每次不用将这篇文章从头看到底</li>
+</ol>
+<p>说到底还是我的记忆总是那种片段性记忆，只记得某个时间点干过些啥，但是具体怎么操作的可能并不是会记得很清楚，所以这个Blog的初衷可能为了方便记忆，和存放一些自己感兴趣的东西</p>
+<p>let’s go ahead：<br>如果我的电脑就一个，那么我建blog之类的只在一个文件夹内修改，那么我也就没其他问题了，可是我可能家里一个工作电脑，单位一个，那么万一我要记录的时候就有问题了，我必须保证两边是同步的，当然一个好方法 就是github保存。</p>
+<p>当然我现在用的是 hexo,它可以自动deploy到 github.io，但是这里面都是编译的文件，而且我还没找到方法增量添加</p>
+<p>所以我这里的解决方案是我还得再见一个repo，存放原始文件，这样我每次修改，保存到github，修改的时候可以先clone，然后再上传。这只能是目前我能想到的解决办法了。</p>
+<p>Let’s go ahead：</p>
+<p>先访问github.com 创建一个repo： xxx<br>接下去：</p>
+<figure class="highlight lang-git"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>touch README<span class="preprocessor">.md</span>(windows下没有touch)
+git init
+git <span class="keyword">add</span> README<span class="preprocessor">.md</span>
+git commit -m <span class="string">"first commit"</span>
+git remote <span class="keyword">add</span> origin https://github<span class="preprocessor">.com</span>/username/xxx<span class="preprocessor">.git</span>
+git <span class="keyword">push</span> -u origin master
+</pre></td></tr></table></figure>
+
+<p>先在一台PC上建立xxx，完成代码</p>
+<figure class="highlight lang-git"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="title">git</span> add.
+<span class="title">git</span> commit -m <span class="string">"xxxxxx"</span>
+<span class="title">git</span> push
+</pre></td></tr></table></figure>
+
+<p>另一台PC上直接</p>
+<figure class="highlight lang-git"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>git <span class="keyword">clone</span> https:<span class="comment">//github.com/useranem/xxx.git</span>
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.bonfy.im/2014/01/05/blog同步/" data-id="yqydzazj5zjwifh6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-一些常识" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/01/01/一些常识/" class="article-date">
@@ -111,7 +188,7 @@ gem uninstall pygments.rb --version <span class="string">"=0.5.2"</span> (视你
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.bonfy.im/2014/01/01/一些常识/" data-id="yuhckkmajb7ghwxz" class="article-share-link">Share</a>
+      <a data-url="http://blog.bonfy.im/2014/01/01/一些常识/" data-id="md3kreaqyvgtqq6v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,7 +227,7 @@ gem uninstall pygments.rb --version <span class="string">"=0.5.2"</span> (视你
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.bonfy.im/2014/01/01/写在201411/" data-id="dkmv3okdxhsfhm05" class="article-share-link">Share</a>
+      <a data-url="http://blog.bonfy.im/2014/01/01/写在201411/" data-id="trxjlhqqwzqv0m4q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -168,14 +245,28 @@ gem uninstall pygments.rb --version <span class="string">"=0.5.2"</span> (视你
     
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/blog/" style="font-size: NaNpx;">blog</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12">一月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01">一月 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12">一月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/01">一月 2014</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -185,6 +276,10 @@ gem uninstall pygments.rb --version <span class="string">"=0.5.2"</span> (视你
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/01/05/blog同步/">blog同步</a>
+          </li>
         
           <li>
             <a href="/2014/01/01/一些常识/">一些常识</a>
